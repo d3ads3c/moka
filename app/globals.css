@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #F5F5F5;
   --foreground: #171717;
+  --primaryColor: #8d4c07;
+  --primaryShadow: #8d4c077a;
 }
 
 @theme inline {
@@ -12,15 +14,84 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: iranyekan-bold;
+  src: url("./fonts/iranyekanwebbold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: iranyekan;
+  src: url("./fonts/iranyekanwebregular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: iranyekan-light;
+  src: url("./fonts/iranyekanweblight.ttf") format("truetype");
+  font-weight: light;
+}
+
+@font-face {
+  font-family: alibaba-black;
+  src: url("./fonts/Alibaba-Black.woff2") format("truetype");
+  font-weight: light;
+}
+
+@font-face {
+  font-family: alibaba-bold;
+  src: url("./fonts/Alibaba-Bold.woff2") format("truetype");
+  font-weight: light;
+}
+
+.iranyekan-bold {
+  font-family: iranyekan-bold !important;
+}
+
+.iranyekan {
+  font-family: iranyekan !important;
+}
+
+.iranyekan-light {
+  font-family: iranyekan-light !important;
+}
+
+.custom_shadow {
+  box-shadow: 0px 7px 20px -5px var(--primaryShadow);
+}
+
+h1,
+h2 {
+  font-family: iranyekan-bold;
+}
+
+h3,
+button,
+a,
+li {
+  font-family: iranyekan;
+}
+
+p {
+  font-family: iranyekan-light;
+}
+
+.alibaba-black {
+  font-family: alibaba-black !important;
+}
+
+.alibaba-bold {
+  font-family: alibaba-bold !important;
 }
