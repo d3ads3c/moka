@@ -1,3 +1,34 @@
+## Development: Database
+
+This project uses Prisma with SQLite for local development.
+
+1. Install dependencies:
+
+```bash
+npm i -D prisma && npm i @prisma/client
+```
+
+2. Create `.env` in the project root with:
+
+```bash
+DATABASE_URL="file:./dev.db"
+JWT_SECRET="a-strong-random-secret"
+DEFAULT_ADMIN_EMAIL="admin@example.com"
+DEFAULT_ADMIN_PASSWORD="change-me-please"
+```
+
+3. Initialize the database:
+
+```bash
+npx prisma migrate dev --name init
+```
+
+4. Open Prisma Studio (optional):
+
+```bash
+npx prisma studio
+```
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

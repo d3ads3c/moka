@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import AutoSlideImages from "@/components/AutoSlideImages";
+import ReadyProductsSlider from "@/components/ReadyProductsSlider";
 
 export default function Home() {
   const images = [
@@ -11,7 +12,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="p-3 mt-20 pb-10">
+    <div className="p-3 mt-20 pb-10 max-w-7xl mx-auto">
       <div className="bg-white rounded-3xl px-7 py-14">
         <h1 className="text-[var(--primaryColor)] font-black">موکا چاپ</h1>
         <h2 className="text-2xl alibaba-bold mt-1">
@@ -36,15 +37,15 @@ export default function Home() {
           <Link href={"#"} className="text-[var(--primaryColor)] border border-[var(--primaryColor)] py-2.5 px-6 rounded-xl text-sm">فروشگاه</Link>
         </div>
       </div>
-      <div style={{ width: '100%', height: '120px', position: 'relative', marginTop: '2rem' }}>
+      <div style={{ width: '100%', height: '120px', position: 'relative', marginTop: '2rem' }} className="md:h-40">
         <AutoSlideImages images={images} interval={3000} />
       </div>
       <div className="">
         <div className="text-center mb-3">
           <h2 className="text-[var(--primaryColor)]">خدمات ما</h2>
         </div>
-        <div className="space-y-6">
-          <div className="rounded-3xl bg-[url('/img/services/businesscard.jpg')] bg-cover bg-center h-80 w-full flex items-end">
+        <div className="space-y-6 md:space-y-0 md:grid md:grid-cols-3 md:gap-6">
+          <div className="rounded-3xl bg-[url('/img/services/businesscard.jpg')] bg-cover bg-center h-80 md:h-64 w-full flex items-end">
             <div className="bg-black/30 rounded-3xl flex items-center justify-between p-4 w-full backdrop-blur-xs">
               <div className="w-1/2">
                 <h3 className=" text-white">چاپ کارت ویزیت</h3>
@@ -55,7 +56,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="rounded-3xl bg-[url('/img/services/sticker.jpg')] bg-cover bg-center h-80 w-full flex items-end">
+          <div className="rounded-3xl bg-[url('/img/services/sticker.jpg')] bg-cover bg-center h-80 md:h-64 w-full flex items-end">
             <div className="bg-black/30 rounded-3xl flex items-center justify-between p-4 w-full backdrop-blur-xs">
               <div className="w-1/2">
                 <h3 className=" text-white">لیبل اختصاصی</h3>
@@ -66,7 +67,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="rounded-3xl bg-[url('/img/services/spunbond.jpeg')] bg-cover bg-center h-80 w-full flex items-end">
+          <div className="rounded-3xl bg-[url('/img/services/spunbond.jpeg')] bg-cover bg-center h-80 md:h-64 w-full flex items-end">
             <div className="bg-black/30 rounded-3xl flex items-center justify-between p-4 w-full backdrop-blur-xs">
               <div className="w-1/2">
                 <h3 className=" text-white">ساک دستی اسپان</h3>
@@ -83,16 +84,17 @@ export default function Home() {
         <h2 className="text-xl text-white">مشاوره رایگان</h2>
         <p className="text-white text-sm mt-1.5">جهت دریافت مشاوره رایگان با ما در ارتباط باشید</p>
         <div className="mt-5">
-          <Link href={"#"} className="bg-white text-[var(--primaryColor)] py-2 px-7 rounded-xl iranyekan-bold">تماس با ما</Link>
+          <Link href={"/shop"} className="bg-white text-[var(--primaryColor)] py-2 px-7 rounded-xl iranyekan-bold">مشاهده فروشگاه</Link>
         </div>
       </div>
+      <ReadyProductsSlider />
       <div className="mt-8">
         <div>
           <h2 className="text-[var(--primaryColor)]">مطالب آموزشی</h2>
           <p className="text-xs text-gray-500">محتواهای آموزشی و کاربردی</p>
         </div>
-        <div className="mt-3 space-y-5">
-          <div className="rounded-3xl bg-[url('/img/blog/blog1.webp')] bg-center bg-cover h-80 w-full flex items-end">
+        <div className="mt-3 space-y-5 md:space-y-0 md:grid md:grid-cols-2 md:gap-5">
+          <div className="rounded-3xl bg-[url('/img/blog/blog1.webp')] bg-center bg-cover h-80 md:h-72 w-full flex items-end">
             <div className="bg-black/30 rounded-3xl px-5 py-3 w-full backdrop-blur-xs">
               <div>
                 <h3 className="text-white alibaba-bold">۵ دلیل که شما به کارت ویزیت نیاز دارید</h3>
@@ -104,7 +106,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="rounded-3xl bg-[url('/img/blog/blog1.webp')] bg-center bg-cover h-80 w-full flex items-end">
+          <div className="rounded-3xl bg-[url('/img/blog/blog1.webp')] bg-center bg-cover h-80 md:h-72 w-full flex items-end">
             <div className="bg-black/30 rounded-3xl px-5 py-3 w-full backdrop-blur-xs">
               <div>
                 <h3 className="text-white alibaba-bold">۵ دلیل که شما به کارت ویزیت نیاز دارید</h3>
